@@ -158,28 +158,28 @@ const Projects = () => {
       id: 1,
       title: 'Агентство недвижимости SOLTERRA',
       result: 'Разработка фирменного стиля, лендинга и полного сайта агентства недвижимости',
-      image: 'images/solterra/preview/preview.png',
-      link: '/solterra'
+      image: './images/solterra/preview/preview.png',
+      link: '/project/solterra'
     },
     {
       id: 2,
       title: 'Сервис онлайн-заселения НИТУ МИСИС',
       result: 'Внедрение системы онлайн очереди в университет МИСИС для оптимизации работы с абитуриентами',
-      image: 'images/misis/preview/preview.jpeg',
-      link: '/misis-queue'
+      image: './images/misis/preview/preview.jpeg',
+      link: '/project/misis-queue'
     },
     {
       id: 3,
       title: 'CPQ-система «Спектра»',
       result: 'SaaS-сервис для автоматизации процессов производства и управления заказами',
-      image: '/images/spectra/preview/preview.png',
-      link: '/spectra-cpq'
+      image: './images/spectra/preview/preview.png',
+      link: '/project/spectra-cpq'
     },
     {
       id: 4,
       title: 'Мобильное приложение «Моя Аптечка»',
       result: 'Мобильное приложение для медицинского стартапа с функцией управления лекарствами и напоминаниями',
-      image: 'images/my-kit/preview/preview.png',
+      image: './images/my-kit/preview/preview.png',
       link: '/my-pharmacy'
     }
   ];

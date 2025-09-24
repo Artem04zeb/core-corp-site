@@ -148,7 +148,7 @@ const RecentProjectsComponent = () => {
       title: 'Агентство недвижимости SOLTERRA',
       result: '+40% инвест-заявок за 3 месяца',
       link: '/project/solterra',
-      image: '/images/solterra/preview/preview.png'
+      image: './images/solterra/preview/preview.png'
     },
     {
       id: 2,
@@ -156,7 +156,7 @@ const RecentProjectsComponent = () => {
       title: 'Spectra CPQ',
       result: '–30% времени обработки заказа, +12% CR',
       link: '/project/spectra-cpq',
-      image: '/images/spectra/preview/preview.png'
+      image: './images/spectra/preview/preview.png'
     }
   ];
 

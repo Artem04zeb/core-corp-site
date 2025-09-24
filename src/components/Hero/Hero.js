@@ -243,35 +243,35 @@ const Hero = () => {
       id: 1,
       title: "Запуск проекта Riviera Moinako",
       description: "Новый веб-сайт для жилого комплекса с интерактивными картами и виртуальными турами",
-      link: "/riviera-moinako",
+      link: "/project/riviera-moinako",
       date: "15.01.2025"
     },
     {
       id: 2,
       title: "Обновление MISIS Queue",
       description: "Система управления очередями получила новые функции аналитики",
-      link: "/misis-queue",
+      link: "/project/misis-queue",
       date: "10.01.2025"
     },
     {
       id: 3,
       title: "Запуск My Kit",
       description: "Мобильное приложение для управления аптечкой и здоровьем семьи",
-      link: "/moya-aptechka",
+      link: "/project/moya-aptechka",
       date: "05.01.2025"
     },
     {
       id: 4,
       title: "Spectra CPQ обновлен",
       description: "Конфигуратор продуктов получил улучшенный интерфейс",
-      link: "/spectra-cpq",
+      link: "/project/spectra-cpq",
       date: "28.12.2024"
     },
     {
       id: 5,
       title: "Travel Aggregator",
       description: "Новая платформа для агрегации туристических услуг",
-      link: "/travel-aggregator",
+      link: "/project/travel-aggregator",
       date: "20.12.2024"
     }
   ];

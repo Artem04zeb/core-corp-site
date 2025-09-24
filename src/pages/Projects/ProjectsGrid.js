@@ -134,24 +134,24 @@ const ProjectsGridComponent = () => {
       title: 'Агенство недвижимости Solterra',
       description: 'Разработка фирменного стиля, лендинга и полного сайта агентства недвижимости',
       result: 'Рост узнаваемости бренда на 65%',
-      image: '/images/solterra/preview/preview.png',
-      link: '/solterra'
+      image: './images/solterra/preview/preview.png',
+      link: '/project/solterra'
     },
     {
       id: 2,
       title: 'Riviera-Moinako',
       description: 'Сайт жилого комплекса с современным дизайном и удобной навигацией для потенциальных покупателей',
       result: '+40% обращений инвесторов за 3 месяца',
-      image: '/images/moinako/preview/preview.png',
-      link: '/riviera-moinako'
+      image: './images/moinako/preview/preview.png',
+      link: '/project/riviera-moinako'
     },
     {
       id: 3,
       title: 'Spectra CPQ',
       description: 'SaaS-сервис для автоматизации процессов производства и управления заказами',
       result: 'Сокращение времени обработки заказов на 30%',
-      image: '/images/spectra/preview/preview.png',
-      link: '/spectra-cpq'
+      image: './images/spectra/preview/preview.png',
+      link: '/project/spectra-cpq'
 
     },
     {
@@ -159,15 +159,15 @@ const ProjectsGridComponent = () => {
       title: 'Онлайн очередь МИСИС',
       description: 'Внедрение системы онлайн очереди в университет МИСИС для оптимизации работы с абитуриентами',
       result: 'Сокращение времени ожидания на 70%',
-      image: '/images/misis/preview/preview.jpeg',
-      link: '/misis-queue'
+      image: './images/misis/preview/preview.jpeg',
+      link: '/project/misis-queue'
     },
     {
       id: 5,
       title: 'МедКаб',
       description: 'Сайт для медицинского технологического стартапа с современным дизайном и функциональностью',
       result: '+120% заявок от клиентов',
-      image: '/images/preview/medcab.png',
+      image: './images/preview/medcab.png',
       link: '/medkab'
     },
     {
@@ -175,16 +175,16 @@ const ProjectsGridComponent = () => {
       title: 'Моя Аптечка',
       description: 'Мобильное приложение для медицинского стартапа с функцией управления лекарствами и напоминаниями',
       result: '4.8★ в App Store, 50K+ скачиваний',
-      image: '/images/my-kit/preview/preview.png',
-      link: '/moya-aptechka'
+      image: './images/my-kit/preview/preview.png',
+      link: '/project/moya-aptechka'
     },
     {
       id: 7,
       title: 'Туристический агрегатор',
       description: 'Разработка полнофункционального туристического агрегатора с системой бронирования и отзывов',
       result: 'Обработка 10K+ запросов в день',
-      image: '/images/preview.png',
-      link: '/travel-aggregator'
+      image: './images/preview.png',
+      link: '/project/travel-aggregator'
     }
   ];
 
