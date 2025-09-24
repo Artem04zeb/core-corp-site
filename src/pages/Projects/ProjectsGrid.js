@@ -183,7 +183,7 @@ const ProjectsGridComponent = () => {
       title: 'Туристический агрегатор',
       description: 'Разработка полнофункционального туристического агрегатора с системой бронирования и отзывов',
       result: 'Обработка 10K+ запросов в день',
-      image: './images/preview.png',
+      image: './images/solterra/preview/preview.png',
       link: '/project/travel-aggregator'
     }
   ];
