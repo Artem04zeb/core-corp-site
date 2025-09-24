@@ -80,7 +80,7 @@ const HeroBackground = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/images/misis/background.jpeg');
+  background-image: url('./images/misis/background.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -587,7 +587,7 @@ const MisisQueuePage = () => {
               viewport={{ once: true }}
             >
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/time.png" alt="Автоматическое распределение студентов в общежитиях" />
+                <GalleryImage src="./images/misis/screens/time.png" alt="Автоматическое распределение студентов в общежитиях" />
                 <GalleryCaption>
                 Система обрабатывает загруженный оператором файл и автоматически определяет, в какое общежитие направлен студент. 
                 Далее она ограничивает выбор и предоставляет пользователю только релевантные варианты. 
@@ -596,7 +596,7 @@ const MisisQueuePage = () => {
               </GalleryItem>
               
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/info.png" alt="Организация информации и документов" />
+                <GalleryImage src="./images/misis/screens/info.png" alt="Организация информации и документов" />
                 <GalleryCaption>
                 Вся необходимая организационная информация и обязательные документы собраны в отдельном окне. 
                 Это исключает путаницу и гарантирует, что студент всегда имеет доступ к актуальным данным в удобном формате.
@@ -604,7 +604,7 @@ const MisisQueuePage = () => {
               </GalleryItem>
               
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/final.png" alt="Удобный интерфейс для студентов" />
+                <GalleryImage src="./images/misis/screens/final.png" alt="Удобный интерфейс для студентов" />
                 <GalleryCaption>
                 Простая регистрация и быстрый вход позволяют студентам заселиться без лишних ожиданий. 
                 Нет необходимости стоять у дверей общежития часами: система формирует точный график, и каждого студента ждут к назначенному времени.
@@ -612,7 +612,7 @@ const MisisQueuePage = () => {
               </GalleryItem>
               
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/list.png" alt="Панель управления для административной стороны" />
+                <GalleryImage src="./images/misis/screens/list.png" alt="Панель управления для административной стороны" />
                 <GalleryCaption>
                 Для администрации реализован модуль мониторинга и контроля. 
                 Он позволяет отслеживать активность студентов, просматривать статистику и оперативно решать спорные ситуации. 

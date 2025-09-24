@@ -77,7 +77,7 @@ const ParallaxBlock = () => {
           viewport={{ once: true }}
         >
           <StyledImage 
-            src="/images/photo_2025.jpg" 
+            src="./images/photo_2025.jpg" 
             alt="Команда студии CORE за работой"
             onLoad={handleImageLoad}
             onError={handleImageError}
