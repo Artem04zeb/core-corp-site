@@ -14,6 +14,12 @@ const MenuOverlay = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
+  
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    padding: 40px 0;
+  }
 `;
 
 const MenuContainer = styled.div`
@@ -32,7 +38,14 @@ const MenuContainer = styled.div`
   
   @media (max-width: 768px) {
     padding: 0 24px;
-    gap: 60px;
+    gap: 40px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0 16px;
+    gap: 30px;
   }
 `;
 
@@ -40,12 +53,28 @@ const NavigationColumn = styled.nav`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 20px;
+  }
 `;
 
 const ContactsColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  
+  @media (max-width: 768px) {
+    gap: 30px;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 24px;
+  }
 `;
 
 const NavLink = styled(motion.div)`
