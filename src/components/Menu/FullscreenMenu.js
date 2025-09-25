@@ -18,7 +18,7 @@ const MenuOverlay = styled(motion.div)`
   
   @media (max-width: 768px) {
     align-items: flex-start;
-    padding: 40px 0;
+    padding: 80px 0;
   }
 `;
 
@@ -115,6 +115,10 @@ const ContactSection = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 const ContactTitle = styled.h3`
@@ -124,6 +128,10 @@ const ContactTitle = styled.h3`
   color: #BFBFBF;
   letter-spacing: 0.1em;
   margin: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SocialList = styled.div`
@@ -171,6 +179,8 @@ const ContactForm = styled.form`
   gap: 16px;
   width: 100%;
   max-width: 300px;
+
+
 `;
 
 const FormInput = styled.input`

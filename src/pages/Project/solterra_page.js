@@ -149,7 +149,6 @@ const HeroCTA = styled(motion.button)`
   text-decoration: none;
   transition: all 0.3s ease;
   border: 1px solid #FFFFFF;
-  margin-right: 16px;
   cursor: pointer;
   
   &:hover {
@@ -172,6 +171,10 @@ const HeroCTAButton = styled(motion.a)`
   &:hover {
     background: #FFFFFF;
     color: #151515;
+  }
+      
+  @media (max-width: 768px) {
+    text-align: center;
   }
 `;
 
@@ -328,7 +331,7 @@ const CarouselImage = styled.img`
   border: 1px solid rgba(255, 255, 255, 0.1);
   
   @media (max-width: 768px) {
-    height: 300px;
+    border-radius: 0;
   }
 `;
 

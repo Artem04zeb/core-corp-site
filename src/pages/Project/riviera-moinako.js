@@ -186,6 +186,10 @@ const SecondaryButton = styled(motion.a)`
     background: #FFFFFF;
     color: #151515;
   }
+    
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 // Основные секции

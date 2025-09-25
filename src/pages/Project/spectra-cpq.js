@@ -458,6 +458,10 @@ const CarouselTrack = styled(motion.div)`
   position: relative;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const CarouselItem = styled(motion.div)`
@@ -694,6 +698,7 @@ const ModalDesktopScreen = styled.div`
     
     img {
       border-radius: 8px;
+      height: min-content;
     }
   }
 `;

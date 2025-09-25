@@ -409,7 +409,7 @@ const PhoneMockup = styled.div`
   @media (max-width: 768px) {
     width: 160px;
     height: 320px;
-    padding: 16px;
+    padding: 8px;
     border-radius: 24px;
   }
 `;

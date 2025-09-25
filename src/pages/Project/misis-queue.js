@@ -295,7 +295,7 @@ const GalleryImage = styled.img`
   display: block;
   
   @media (max-width: 768px) {
-    height: 300px;
+    // height: 300px;
   }
 `;
 
