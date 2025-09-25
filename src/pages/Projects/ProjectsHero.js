@@ -119,7 +119,7 @@ const ProjectsHero = () => {
   const { openPopup } = useContactPopupContext();
 
   return (
-    <HeroSection>
+    <HeroSection role="banner" aria-label="Портфолио проектов CORE">
       <Container>
         <HeroContent>
           <ContentSection>
@@ -145,12 +145,13 @@ const ProjectsHero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               whileHover={{ scale: 1.02 }}
+              aria-label="Обсудить ваш проект с командой CORE"
             >
               Обсудить ваш проект
             </CTAButton>
           </ContentSection>
 
-          <StatsSection>
+          <StatsSection role="complementary" aria-label="Статистика проектов">
             <StatsCard
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -158,7 +159,7 @@ const ProjectsHero = () => {
               whileHover={{ scale: 1.02 }}
             >
               <StatsNumber>47+</StatsNumber>
-              <StatsLabel>проектов за 4 голода</StatsLabel>
+              <StatsLabel>проектов за 4 года</StatsLabel>
             </StatsCard>
           </StatsSection>
         </HeroContent>

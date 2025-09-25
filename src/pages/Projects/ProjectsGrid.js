@@ -204,7 +204,7 @@ const ProjectsGridComponent = () => {
   };
 
   return (
-    <ProjectsSection>
+    <ProjectsSection role="main" aria-label="Портфолио проектов">
       <Container>
         <SectionHeader>
           <Title
@@ -223,6 +223,8 @@ const ProjectsGridComponent = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          role="grid"
+          aria-label="Сетка проектов"
         >
           {/* Первый проект */}
           <ProjectCard
@@ -230,9 +232,16 @@ const ProjectsGridComponent = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             onClick={() => window.location.href = `${projects[0].link}`}
+            role="gridcell"
+            aria-label={`Проект: ${projects[0].title}`}
+            tabIndex={0}
           >
             <ProjectImageContainer>
-              <ProjectImage src={projects[0].image} alt={projects[0].title} />
+              <ProjectImage 
+                src={projects[0].image} 
+                alt={`Скриншот проекта ${projects[0].title} - ${projects[0].description}`}
+                loading="lazy"
+              />
               <ProjectOverlay>
                 <OverlayTitle>{projects[0].title}</OverlayTitle>
                 <OverlayResult>{projects[0].result}</OverlayResult>
@@ -250,9 +259,16 @@ const ProjectsGridComponent = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             onClick={() => window.location.href = `${projects[1].link}`}
+            role="gridcell"
+            aria-label={`Проект: ${projects[1].title}`}
+            tabIndex={0}
           >
             <ProjectImageContainer>
-              <ProjectImage src={projects[1].image} alt={projects[1].title} />
+              <ProjectImage 
+                src={projects[1].image} 
+                alt={`Скриншот проекта ${projects[1].title} - ${projects[1].description}`}
+                loading="lazy"
+              />
               <ProjectOverlay>
                 <OverlayTitle>{projects[1].title}</OverlayTitle>
                 <OverlayResult>{projects[1].result}</OverlayResult>
@@ -270,9 +286,16 @@ const ProjectsGridComponent = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             onClick={() => window.location.href = `${projects[2].link}`}
+            role="gridcell"
+            aria-label={`Проект: ${projects[2].title}`}
+            tabIndex={0}
           >
             <ProjectImageContainer>
-              <ProjectImage src={projects[2].image} alt={projects[2].title} />
+              <ProjectImage 
+                src={projects[2].image} 
+                alt={`Скриншот проекта ${projects[2].title} - ${projects[2].description}`}
+                loading="lazy"
+              />
               <ProjectOverlay>
                 <OverlayTitle>{projects[2].title}</OverlayTitle>
                 <OverlayResult>{projects[2].result}</OverlayResult>
@@ -290,9 +313,16 @@ const ProjectsGridComponent = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             onClick={() => window.location.href = `${projects[3].link}`}
+            role="gridcell"
+            aria-label={`Проект: ${projects[3].title}`}
+            tabIndex={0}
           >
             <ProjectImageContainer>
-              <ProjectImage src={projects[3].image} alt={projects[3].title} />
+              <ProjectImage 
+                src={projects[3].image} 
+                alt={`Скриншот проекта ${projects[3].title} - ${projects[3].description}`}
+                loading="lazy"
+              />
               <ProjectOverlay>
                 <OverlayTitle>{projects[3].title}</OverlayTitle>
                 <OverlayResult>{projects[3].result}</OverlayResult>
@@ -330,9 +360,16 @@ const ProjectsGridComponent = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
             onClick={() => window.location.href = `${projects[5].link}`}
+            role="gridcell"
+            aria-label={`Проект: ${projects[5].title}`}
+            tabIndex={0}
           >
             <ProjectImageContainer>
-              <ProjectImage src={projects[5].image} alt={projects[5].title} />
+              <ProjectImage 
+                src={projects[5].image} 
+                alt={`Скриншот проекта ${projects[5].title} - ${projects[5].description}`}
+                loading="lazy"
+              />
               <ProjectOverlay>
                 <OverlayTitle>{projects[5].title}</OverlayTitle>
                 <OverlayResult>{projects[5].result}</OverlayResult>
@@ -366,6 +403,35 @@ const ProjectsGridComponent = () => {
 
         </ProjectsGrid>
       </Container>
+      
+      {/* Structured Data for Projects */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Портфолио проектов CORE",
+          "description": "Избранные проекты веб-агенства CORE: разработка сайтов, мобильных приложений и цифровых сервисов",
+          "url": "https://core-studio.ru/projects",
+          "numberOfItems": projects.length,
+          "itemListElement": projects.map((project, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "CreativeWork",
+              "name": project.title,
+              "description": project.description,
+              "url": `https://core-studio.ru${project.link}`,
+              "image": `https://core-studio.ru${project.image}`,
+              "creator": {
+                "@type": "Organization",
+                "name": "CORE Studio"
+              },
+              "dateCreated": "2024",
+              "genre": "Веб-разработка"
+            }
+          }))
+        })}
+      </script>
     </ProjectsSection>
   );
 };
