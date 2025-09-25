@@ -532,7 +532,7 @@ const ContactText = styled(motion.p)`
   margin-right: auto;
 `;
 
-const ContactCTA = styled(motion.a)`
+const ContactCTA = styled(motion.button)`
   display: inline-block;
   padding: 16px 32px;
   background: #FFFFFF;
@@ -923,7 +923,7 @@ const ProjectPage = () => {
             Обсудим ваш проект и предложим путь, который поможет вашей идее раскрыться в полной мере
           </ContactText>
           <ContactCTA
-            href="/contact"
+            onClick={openPopup}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
