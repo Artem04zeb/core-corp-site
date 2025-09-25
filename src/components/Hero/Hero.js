@@ -11,6 +11,7 @@ const HeroSection = styled.section`
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #151515 0%, #1A1A1A 100%);
 `;
 
 const Container = styled.div`
@@ -295,7 +296,7 @@ const Hero = () => {
   ];
 
   return (
-    <HeroSection>
+    <HeroSection role="banner" aria-label="Главная секция">
       <Container>
         <HeroGrid>
           <ContentSection>
@@ -322,6 +323,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               whileHover={{ scale: 1.02 }}
+              aria-label="Получить бесплатную консультацию"
             >
               Бесплатная консультация
             </ConsultationButton>
@@ -332,6 +334,8 @@ const Hero = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
+            role="complementary"
+            aria-label="Новости и уведомления"
           >
             <NewsHeader>
               <NewsTitle>Новости</NewsTitle>
@@ -340,18 +344,18 @@ const Hero = () => {
             
             <NewsContent>
               {newsData.map((item, index) => (
-                <NewsItem key={item.id}>
+                <NewsItem key={item.id} role="article">
                   <NewsItemTitle>{item.title}</NewsItemTitle>
                   <NewsItemDescription>{item.description}</NewsItemDescription>
                   <NewsItemDate>{item.date}</NewsItemDate>
-                  <NewsItemLink to={item.link}>
+                  <NewsItemLink to={item.link} aria-label={`Подробнее о ${item.title}`}>
                     Подробнее →
                   </NewsItemLink>
                 </NewsItem>
               ))}
               
               {notifications.map((notification) => (
-                <NotificationItem key={notification.id}>
+                <NotificationItem key={notification.id} role="alert">
                   <NotificationText>{notification.text}</NotificationText>
                   <NotificationTime>{notification.time}</NotificationTime>
                 </NotificationItem>
