@@ -23,6 +23,10 @@
       "dest": "/fonts/$1"
     },
     {
+      "src": "/project/(.*)",
+      "dest": "/index.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
