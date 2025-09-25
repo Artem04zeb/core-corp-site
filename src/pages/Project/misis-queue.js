@@ -463,9 +463,9 @@ const MisisQueuePage = () => {
       {/* Хлебные крошки */}
       <Breadcrumbs items={breadcrumbItems} />
 
-      <main role="main" aria-label="Проект МИСИС Queue - цифровой сервис для студентов">
+      <main>
         {/* Hero Section */}
-        <HeroSection role="banner" aria-label="МИСИС-заселение - цифровой сервис для студентов">
+        <HeroSection>
           <HeroBackground />
           <Container>
             <HeroContent>
@@ -491,7 +491,6 @@ const MisisQueuePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.1, delay: 0.1 }}
                 whileHover={{ scale: 1.02 }}
-                aria-label="Обсудить проект МИСИС Queue с командой CORE"
               >
                 Обсудить проект для вашей организации
               </CTAButton>
@@ -500,7 +499,7 @@ const MisisQueuePage = () => {
         </HeroSection>
 
         {/* О проекте */}
-        <Section role="complementary" aria-label="Информация о проекте МИСИС Queue">
+        <Section>
           <SectionContainer>
             <SectionTitle>О проекте</SectionTitle>
             <SectionText>
@@ -581,10 +580,8 @@ const MisisQueuePage = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              role="grid"
-              aria-label="Галерея скриншотов МИСИС Queue"
             >
-              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Автоматическое распределение студентов">
+              <GalleryItem variants={itemVariants}>
                 <GalleryImage 
                   src="/images/misis/screens/time.png" 
                   alt="Скриншот системы МИСИС Queue - автоматическое распределение студентов в общежитиях с выбором времени заселения" 
@@ -597,7 +594,7 @@ const MisisQueuePage = () => {
                 </GalleryCaption>
               </GalleryItem>
               
-              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Организация информации и документов">
+              <GalleryItem variants={itemVariants}>
                 <GalleryImage 
                   src="/images/misis/screens/info.png" 
                   alt="Скриншот системы МИСИС Queue - организация информации и документов для студентов" 
@@ -609,7 +606,7 @@ const MisisQueuePage = () => {
                 </GalleryCaption>
               </GalleryItem>
               
-              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Удобный интерфейс для студентов">
+              <GalleryItem variants={itemVariants}>
                 <GalleryImage 
                   src="/images/misis/screens/final.png" 
                   alt="Скриншот системы МИСИС Queue - удобный интерфейс для студентов с простой регистрацией" 
@@ -621,7 +618,7 @@ const MisisQueuePage = () => {
                 </GalleryCaption>
               </GalleryItem>
               
-              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Панель управления для администрации">
+              <GalleryItem variants={itemVariants}>
                 <GalleryImage 
                   src="/images/misis/screens/list.png" 
                   alt="Скриншот системы МИСИС Queue - панель управления для административной стороны с мониторингом и контролем" 
