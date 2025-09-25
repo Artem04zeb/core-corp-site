@@ -56,7 +56,7 @@ const Paragraph = styled(motion.p)`
 
 const CitiesSEOComponent = () => {
   return (
-    <SEOSection>
+    <SEOSection role="complementary" aria-label="Информация о работе CORE по всей России">
       <Container>
         <SectionHeader>
           <Title

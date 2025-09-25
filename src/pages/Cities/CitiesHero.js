@@ -54,7 +54,7 @@ const Subtitle = styled(motion.p)`
 
 const CitiesHero = () => {
   return (
-    <HeroSection>
+    <HeroSection role="banner" aria-label="CORE работает по всей России">
       <Container>
         <HeroContent>
           <Title

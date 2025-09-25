@@ -320,7 +320,7 @@ const CitiesGridComponent = () => {
   };
 
   return (
-    <CitiesSection>
+    <CitiesSection role="main" aria-label="Города России где работает CORE">
       <Container>
         <CitiesGrid
           as={motion.div}
@@ -328,6 +328,8 @@ const CitiesGridComponent = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          role="grid"
+          aria-label="Сетка городов"
         >
           {cities.map((city) => (
             <CityCard
@@ -336,12 +338,40 @@ const CitiesGridComponent = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.98 }}
+              role="gridcell"
+              aria-label={`Город: ${city.name}`}
+              tabIndex={0}
             >
               <CityTitle>{city.name}</CityTitle>
               <CityDescription>{city.description}</CityDescription>
             </CityCard>
           ))}
         </CitiesGrid>
+        
+        {/* Structured Data for Cities */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Города России где работает CORE",
+            "description": "CORE реализует проекты в 35 городах России: от Калининграда до Владивостока",
+            "url": "https://core-studio.ru/goroda",
+            "numberOfItems": cities.length,
+            "itemListElement": cities.map((city, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "City",
+                "name": city.name,
+                "description": city.description,
+                "containedInPlace": {
+                  "@type": "Country",
+                  "name": "Россия"
+                }
+              }
+            }))
+          })}
+        </script>
       </Container>
     </CitiesSection>
   );
