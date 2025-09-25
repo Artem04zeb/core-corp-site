@@ -62,7 +62,7 @@ const BackButton = styled(Link)`
 const HeroSection = styled.section`
   padding: 120px 0;
   min-height: 100vh;
-  background-image: url('./images/solterra/background2.png');
+  background-image: url('/images/solterra/background.png');
   background-size: cover;
   background-color: #29161f;
   background-position: center;
@@ -575,9 +575,9 @@ const ProjectPage = () => {
   const { openPopup } = useContactPopupContext();
   
   const images = [
-    "./images/solterra/screens/1.png",
-    "./images/solterra/screens/2.png", 
-    "./images/solterra/screens/3.png",
+    "/images/solterra/screens/1.png",
+    "/images/solterra/screens/2.png", 
+    "/images/solterra/screens/3.png",
     "cta"
   ];
 
@@ -643,7 +643,7 @@ const ProjectPage = () => {
             </HeroContent>
             <HeroVisual variants={itemVariants}>
               <LogoImage 
-                src="./images/solterra/logo.svg" 
+                src="/images/solterra/logo.svg" 
                 alt="Solterra Logo"
               />
             </HeroVisual>

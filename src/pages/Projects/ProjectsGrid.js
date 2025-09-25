@@ -134,7 +134,7 @@ const ProjectsGridComponent = () => {
       title: 'Агенство недвижимости Solterra',
       description: 'Разработка фирменного стиля, лендинга и полного сайта агентства недвижимости',
       result: 'Рост узнаваемости бренда на 65%',
-      image: './images/solterra/preview/preview.png',
+      image: '/images/solterra/preview/preview.png',
       link: '/project/solterra'
     },
     {
@@ -142,7 +142,7 @@ const ProjectsGridComponent = () => {
       title: 'Riviera-Moinako',
       description: 'Сайт жилого комплекса с современным дизайном и удобной навигацией для потенциальных покупателей',
       result: '+40% обращений инвесторов за 3 месяца',
-      image: './images/moinako/preview/preview.png',
+      image: '/images/moinako/preview/preview.png',
       link: '/project/riviera-moinako'
     },
     {
@@ -150,7 +150,7 @@ const ProjectsGridComponent = () => {
       title: 'Spectra CPQ',
       description: 'SaaS-сервис для автоматизации процессов производства и управления заказами',
       result: 'Сокращение времени обработки заказов на 30%',
-      image: './images/spectra/preview/preview.png',
+      image: '/images/spectra/preview/preview.png',
       link: '/project/spectra-cpq'
 
     },
@@ -159,7 +159,7 @@ const ProjectsGridComponent = () => {
       title: 'Онлайн очередь МИСИС',
       description: 'Внедрение системы онлайн очереди в университет МИСИС для оптимизации работы с абитуриентами',
       result: 'Сокращение времени ожидания на 70%',
-      image: './images/misis/preview/preview.jpeg',
+      image: '/images/misis/preview/preview.jpeg',
       link: '/project/misis-queue'
     },
     {
@@ -167,15 +167,15 @@ const ProjectsGridComponent = () => {
       title: 'МедКаб',
       description: 'Сайт для медицинского технологического стартапа с современным дизайном и функциональностью',
       result: '+120% заявок от клиентов',
-      image: './images/preview/medcab.png',
-      link: '/medkab'
+      image: '/images/preview/medcab.png',
+      link: '/project/medkab'
     },
     {
       id: 6,
       title: 'Моя Аптечка',
       description: 'Мобильное приложение для медицинского стартапа с функцией управления лекарствами и напоминаниями',
       result: '4.8★ в App Store, 50K+ скачиваний',
-      image: './images/my-kit/preview/preview.png',
+      image: '/images/my-kit/preview/preview.png',
       link: '/project/moya-aptechka'
     },
     {
@@ -183,7 +183,7 @@ const ProjectsGridComponent = () => {
       title: 'Туристический агрегатор',
       description: 'Разработка полнофункционального туристического агрегатора с системой бронирования и отзывов',
       result: 'Обработка 10K+ запросов в день',
-      image: './images/solterra/preview/preview.png',
+      image: '/images/preview.png',
       link: '/project/travel-aggregator'
     }
   ];
@@ -229,7 +229,7 @@ const ProjectsGridComponent = () => {
             key={projects[0].id}
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
-            onClick={() => window.location.href = `/project${projects[0].link}`}
+            onClick={() => window.location.href = `${projects[0].link}`}
           >
             <ProjectImageContainer>
               <ProjectImage src={projects[0].image} alt={projects[0].title} />
@@ -249,7 +249,7 @@ const ProjectsGridComponent = () => {
             key={projects[1].id}
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
-            onClick={() => window.location.href = `/project${projects[1].link}`}
+            onClick={() => window.location.href = `${projects[1].link}`}
           >
             <ProjectImageContainer>
               <ProjectImage src={projects[1].image} alt={projects[1].title} />
@@ -269,7 +269,7 @@ const ProjectsGridComponent = () => {
             key={projects[2].id}
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
-            onClick={() => window.location.href = `/project${projects[2].link}`}
+            onClick={() => window.location.href = `${projects[2].link}`}
           >
             <ProjectImageContainer>
               <ProjectImage src={projects[2].image} alt={projects[2].title} />
@@ -289,7 +289,7 @@ const ProjectsGridComponent = () => {
             key={projects[3].id}
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
-            onClick={() => window.location.href = `/project${projects[3].link}`}
+            onClick={() => window.location.href = `${projects[3].link}`}
           >
             <ProjectImageContainer>
               <ProjectImage src={projects[3].image} alt={projects[3].title} />
@@ -329,7 +329,7 @@ const ProjectsGridComponent = () => {
             key={projects[5].id}
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
-            onClick={() => window.location.href = `/project${projects[5].link}`}
+            onClick={() => window.location.href = `${projects[5].link}`}
           >
             <ProjectImageContainer>
               <ProjectImage src={projects[5].image} alt={projects[5].title} />

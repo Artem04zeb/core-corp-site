@@ -833,47 +833,47 @@ const SpectraCpqPage = () => {
 
   const screens = [
     {
-      image: './images/spectra/screens/tenant.png',
+      image: '/images/spectra/screens/tenant.png',
       title: 'Мультитенантность',
       description: 'Система поддерживает одновременную работу нескольких организаций в едином решении. Данные, настройки и бизнес-процессы изолированы, что обеспечивает безопасность и удобство для каждого клиента.'
   },
     {
-      image: './images/spectra/screens/planning.png',
+      image: '/images/spectra/screens/planning.png',
       title: 'Планирование и аналитика',
       description: 'Интерактивный календарь для управления графиками сотрудников. Позволяет создавать собственные типы событий, отслеживать загруженность замерщиков и других специалистов, оптимизируя распределение ресурсов компании.'
     },
     {
-      image: './images/spectra/screens/order-main.png',
+      image: '/images/spectra/screens/order-main.png',
       title: 'Конфигуратор заказов',
       description: 'Гибкий инструмент для создания и настройки типов заказов под любые бизнес-процессы. Позволяет инженерам формировать сложные формы с учётом параметров, ограничений и взаимосвязей, обеспечивая точность и прозрачность обработки заказов.'
     },
     {
-      image: './images/spectra/screens/catalog-products.png',
+      image: '/images/spectra/screens/catalog-products.png',
       title: 'Настраиваемый каталог продуктов',
       description: 'Централизованная база всех товаров и услуг компании. В каталоге отражаются характеристики, цены, комплектации и совместимость, что позволяет инженерам задавать сложные конфигурации и гарантировать корректность предложений.'
     },
     {
-      image: './images/spectra/screens/documents.png',
+      image: '/images/spectra/screens/documents.png',
       title: 'Конфигуратор шаблонов документов',
       description: 'Единый модуль для подготовки, редактирования и хранения документов. Система автоматизирует работу с коммерческими предложениями, договорами и приложениями, отслеживает их статус и минимизирует ошибки при документообороте.'
     },
     {
-      image: './images/spectra/screens/role-fonfigure.png',
+      image: '/images/spectra/screens/role-fonfigure.png',
       title: 'Настройка ролей',
       description: 'Гибкая система разграничения прав пользователей. Позволяет назначать роли, управлять уровнем доступа к данным и функциям, обеспечивая безопасность и прозрачность работы внутри организации.'
     },
     {
-      image: './images/spectra/screens/status-configure.png',
+      image: '/images/spectra/screens/status-configure.png',
       title: 'Управление статусами',
       description: 'Инструмент для детальной настройки этапов жизненного цикла заказа. Подстраивается под уникальные бизнес-процессы компании и позволяет точно отслеживать статус выполнения в любой момент времени.'
     },
     {
-      image: './images/spectra/screens/import.png',
+      image: '/images/spectra/screens/import.png',
       title: 'Импорт данных',
       description: 'Функционал для массовой загрузки информации о продуктах, клиентах и заказах из внешних источников. Поддерживает импорт через файлы и API, ускоряя внедрение и обновление данных в системе.'
     },
     {
-      image: './images/spectra/screens/lk.png',
+      image: '/images/spectra/screens/lk.png',
       title: 'Личный кабинет',
       description: 'Персонализированная рабочая среда для пользователей. Содержит историю действий, быстрый доступ к инструментам и возможность интеграции с Telegram через webhooks для мгновенных уведомлений и удобного взаимодействия.'
     }
@@ -977,7 +977,7 @@ const SpectraCpqPage = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <img 
-                  src="./images/spectra/preview/preview.png" 
+                  src="/images/spectra/preview/preview.png" 
                   alt="CPQ-система Спектра - интерфейс системы"
                 />
               </HeroImage>

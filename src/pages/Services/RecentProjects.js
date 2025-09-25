@@ -146,17 +146,17 @@ const RecentProjectsComponent = () => {
       id: 1,
       type: 'Сайт ЖК/девелопер',
       title: 'Агентство недвижимости SOLTERRA',
-      result: '+40% инвест-заявок за 3 месяца',
+      result: 'Разработка фирменного стиля, лендинга и полного сайта агентства недвижимости',
       link: '/project/solterra',
-      image: './images/solterra/preview/preview.png'
+      image: '/images/solterra/preview/preview.png'
     },
     {
       id: 2,
       type: 'SaaS/продукт',
       title: 'Spectra CPQ',
-      result: '–30% времени обработки заказа, +12% CR',
+      result: 'SaaS-сервис для автоматизации процессов производства и управления заказами',
       link: '/project/spectra-cpq',
-      image: './images/spectra/preview/preview.png'
+      image: '/images/spectra/preview/preview.png'
     }
   ];
 

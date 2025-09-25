@@ -80,7 +80,7 @@ const HeroBackground = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./images/misis/background.jpeg');
+  background-image: url('/images/misis/background.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,8 +155,6 @@ const CTAButton = styled(motion.button)`
   font-family: inherit;
   
   &:hover {
-    // background: transparent;
-    // color: #FFFFFF;  
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
   }
 `;
@@ -164,8 +162,6 @@ const CTAButton = styled(motion.button)`
 // Основные секции
 const Section = styled.section`
   padding: 120px 0;
-  // смена цвета на белую
-  // background-color: #151515;
   background-color: #ffffff;
 
 `;
@@ -184,8 +180,6 @@ const SectionTitle = styled.h2`
   font-family: 'Akkurat Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 48px;
   font-weight: 700;
-  // color: #FFFFFF;
-  // смена цвета
   color:rgb(27, 56, 200);
   margin-bottom: 48px;
   letter-spacing: -0.02em;
@@ -199,7 +193,6 @@ const SectionTitle = styled.h2`
 const SectionText = styled.p`
   font-size: 18px;
   color: #E0E0E0;
-  // смена цвета
   color:rgb(27, 56, 200);
   font-weight: 400;
   line-height: 1.6;
@@ -217,7 +210,6 @@ const TasksList = styled.ul`
 const TaskItem = styled.li`
   font-size: 18px;
   color: #E0E0E0;
-  // смена цвета
   color: #1b38c8;
   font-weight: 400;
   line-height: 1.6;
@@ -244,7 +236,6 @@ const WorkflowGrid = styled.div`
 const WorkflowCard = styled.div`
   background: #2A2A2A;
   border: 1px solid #3A3A3A;
-  // смена цвета
   background: #f1f2fe;
   border: 1px solid #1b38c8;  
   padding: 40px;
@@ -271,9 +262,7 @@ const WorkflowTitle = styled.h3`
 `;
 
 const WorkflowText = styled.p`
-  // смена цвета
   font-size: 16px;
-  // color: #E0E0E0;
   color: #1b38c8;
   font-weight: 300;
   line-height: 1.6;
@@ -327,9 +316,6 @@ const ResultsGrid = styled.div`
 `;
 
 const ResultCard = styled.div`
-  // background: #2A2A2A;
-  // border: 1px solid #3A3A3A;
-  // смена цвета
   background: #f1f2fe;
   border: 1px solid #1b38c8;
   padding: 40px;
@@ -351,7 +337,6 @@ const ResultNumber = styled.div`
 
 const ResultText = styled.div`
   font-size: 16px;
-  // color: #E0E0E0;
   color: #1b38c8;
   font-weight: 400;
   line-height: 1.4;
@@ -587,7 +572,7 @@ const MisisQueuePage = () => {
               viewport={{ once: true }}
             >
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="./images/misis/screens/time.png" alt="Автоматическое распределение студентов в общежитиях" />
+                <GalleryImage src="/images/misis/screens/time.png" alt="Автоматическое распределение студентов в общежитиях" />
                 <GalleryCaption>
                 Система обрабатывает загруженный оператором файл и автоматически определяет, в какое общежитие направлен студент. 
                 Далее она ограничивает выбор и предоставляет пользователю только релевантные варианты. 
@@ -596,7 +581,7 @@ const MisisQueuePage = () => {
               </GalleryItem>
               
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="./images/misis/screens/info.png" alt="Организация информации и документов" />
+                <GalleryImage src="/images/misis/screens/info.png" alt="Организация информации и документов" />
                 <GalleryCaption>
                 Вся необходимая организационная информация и обязательные документы собраны в отдельном окне. 
                 Это исключает путаницу и гарантирует, что студент всегда имеет доступ к актуальным данным в удобном формате.
@@ -604,7 +589,7 @@ const MisisQueuePage = () => {
               </GalleryItem>
               
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="./images/misis/screens/final.png" alt="Удобный интерфейс для студентов" />
+                <GalleryImage src="/images/misis/screens/final.png" alt="Удобный интерфейс для студентов" />
                 <GalleryCaption>
                 Простая регистрация и быстрый вход позволяют студентам заселиться без лишних ожиданий. 
                 Нет необходимости стоять у дверей общежития часами: система формирует точный график, и каждого студента ждут к назначенному времени.
@@ -612,7 +597,7 @@ const MisisQueuePage = () => {
               </GalleryItem>
               
               <GalleryItem variants={itemVariants}>
-                <GalleryImage src="./images/misis/screens/list.png" alt="Панель управления для административной стороны" />
+                <GalleryImage src="/images/misis/screens/list.png" alt="Панель управления для административной стороны" />
                 <GalleryCaption>
                 Для администрации реализован модуль мониторинга и контроля. 
                 Он позволяет отслеживать активность студентов, просматривать статистику и оперативно решать спорные ситуации. 

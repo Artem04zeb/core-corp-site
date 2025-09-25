@@ -1,0 +1,67 @@
+[1mdiff --git a/src/pages/Projects/ProjectsGrid.js b/src/pages/Projects/ProjectsGrid.js[m
+[1mindex ea52237a..60a71ba6 100644[m
+[1m--- a/src/pages/Projects/ProjectsGrid.js[m
+[1m+++ b/src/pages/Projects/ProjectsGrid.js[m
+[36m@@ -168,7 +168,7 @@[m [mconst ProjectsGridComponent = () => {[m
+       description: 'Сайт для медицинского технологического стартапа с современным дизайном и функциональностью',[m
+       result: '+120% заявок от клиентов',[m
+       image: '/images/preview/medcab.png',[m
+[31m-      link: '/medkab'[m
+[32m+[m[32m      link: '/project/medkab'[m
+     },[m
+     {[m
+       id: 6,[m
+[36m@@ -183,7 +183,7 @@[m [mconst ProjectsGridComponent = () => {[m
+       title: 'Туристический агрегатор',[m
+       description: 'Разработка полнофункционального туристического агрегатора с системой бронирования и отзывов',[m
+       result: 'Обработка 10K+ запросов в день',[m
+[31m-      image: '/images/solterra/preview/preview.png',[m
+[32m+[m[32m      image: '/images/preview.png',[m
+       link: '/project/travel-aggregator'[m
+     }[m
+   ];[m
+[36m@@ -229,7 +229,7 @@[m [mconst ProjectsGridComponent = () => {[m
+             key={projects[0].id}[m
+             variants={itemVariants}[m
+             whileHover={{ scale: 1.02 }}[m
+[31m-            onClick={() => window.location.href = `/project${projects[0].link}`}[m
+[32m+[m[32m            onClick={() => window.location.href = `${projects[0].link}`}[m
+           >[m
+             <ProjectImageContainer>[m
+               <ProjectImage src={projects[0].image} alt={projects[0].title} />[m
+[36m@@ -249,7 +249,7 @@[m [mconst ProjectsGridComponent = () => {[m
+             key={projects[1].id}[m
+             variants={itemVariants}[m
+             whileHover={{ scale: 1.02 }}[m
+[31m-            onClick={() => window.location.href = `/project${projects[1].link}`}[m
+[32m+[m[32m            onClick={() => window.location.href = `${projects[1].link}`}[m
+           >[m
+             <ProjectImageContainer>[m
+               <ProjectImage src={projects[1].image} alt={projects[1].title} />[m
+[36m@@ -269,7 +269,7 @@[m [mconst ProjectsGridComponent = () => {[m
+             key={projects[2].id}[m
+             variants={itemVariants}[m
+             whileHover={{ scale: 1.02 }}[m
+[31m-            onClick={() => window.location.href = `/project${projects[2].link}`}[m
+[32m+[m[32m            onClick={() => window.location.href = `${projects[2].link}`}[m
+           >[m
+             <ProjectImageContainer>[m
+               <ProjectImage src={projects[2].image} alt={projects[2].title} />[m
+[36m@@ -289,7 +289,7 @@[m [mconst ProjectsGridComponent = () => {[m
+             key={projects[3].id}[m
+             variants={itemVariants}[m
+             whileHover={{ scale: 1.02 }}[m
+[31m-            onClick={() => window.location.href = `/project${projects[3].link}`}[m
+[32m+[m[32m            onClick={() => window.location.href = `${projects[3].link}`}[m
+           >[m
+             <ProjectImageContainer>[m
+               <ProjectImage src={projects[3].image} alt={projects[3].title} />[m
+[36m@@ -329,7 +329,7 @@[m [mconst ProjectsGridComponent = () => {[m
+             key={projects[5].id}[m
+             variants={itemVariants}[m
+             whileHover={{ scale: 1.02 }}[m
+[31m-            onClick={() => window.location.href = `/project${projects[5].link}`}[m
+[32m+[m[32m            onClick={() => window.location.href = `${projects[5].link}`}[m
+           >[m
+             <ProjectImageContainer>[m
+               <ProjectImage src={projects[5].image} alt={projects[5].title} />[m

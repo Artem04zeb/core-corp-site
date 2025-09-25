@@ -6,7 +6,7 @@ import { useContactPopupContext } from '../../contexts/ContactPopupContext';
 
 // Container
 const ProjectPageContainer = styled.div`
-  background-image: url('./images/my-kit/bg4.jpg');
+  background-image: url('/images/my-kit/bg4.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -93,7 +93,6 @@ const ProblemSection = styled.section`
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
-  // background: linear-gradient(135deg, rgba(21, 21, 21, 0.9) 0%, rgba(42, 42, 42, 0.7) 100%);
 `;
 
 const ProblemBackground = styled.div`
@@ -102,7 +101,6 @@ const ProblemBackground = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./images/my-kit/hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -807,47 +805,47 @@ const MoyaAptechkaPage = () => {
 
   const screens = [
     {
-      image: './images/my-kit/screens/today-screen.png',
+      image: '/images/my-kit/screens/today-screen.png',
       title: 'Главный экран',
       description: 'Удобный список всех лекарств с возможностью быстрого добавления новых препаратов. Показывает актуальные напоминания и сроки годности.'
     },
     {
-      image: './images/my-kit/screens/data-screen.png',
+      image: '/images/my-kit/screens/data-screen.png',
       title: 'Добавление лекарства',
       description: 'Простой процесс добавления препарата с возможностью сканирования штрих-кода, фотографирования упаковки и ввода данных вручную.'
     },
     {
-      image: './images/my-kit/screens/notify-screen.png',
+      image: '/images/my-kit/screens/notify-screen.png',
       title: 'Уведомления',
       description: 'Система напоминаний о приеме лекарств с настраиваемым расписанием. Показывает время приема и дозировку.'
     },
     {
-      image: './images/my-kit/screens/сканирование.png',
+      image: '/images/my-kit/screens/сканирование.png',
       title: 'Сканирование',
       description: 'Быстрое добавление лекарств через сканирование штрих-кода. Автоматическое заполнение информации о препарате.'
     },
     {
-      image: './images/my-kit/screens/c семьей.png',
+      image: '/images/my-kit/screens/c семьей.png',
       title: 'Семейный доступ',
       description: 'Управление аптечкой для всей семьи. Возможность создавать профили для каждого члена семьи и отслеживать их лекарства.'
     },
     {
-      image: './images/my-kit/screens/Мое здоровье.png',
+      image: '/images/my-kit/screens/Мое здоровье.png',
       title: 'Мое здоровье',
       description: 'Отслеживание курсов лечения и истории приема лекарств. Аналитика и статистика для контроля здоровья.'
     },
     {
-      image: './images/my-kit/screens/ввод номера.png',
+      image: '/images/my-kit/screens/ввод номера.png',
       title: 'Ввод номера телефона',
       description: 'Простая авторизация через номер телефона для быстрого входа в приложение и синхронизации данных.'
     },
     {
-      image: './images/my-kit/screens/subscribe-screen.png',
+      image: '/images/my-kit/screens/subscribe-screen.png',
       title: 'Подписка',
       description: 'Премиум-функции приложения с расширенными возможностями для управления здоровьем и лекарствами.'
     },
     {
-      image: './images/my-kit/screens/completed — с рекламой.png',
+      image: '/images/my-kit/screens/completed — с рекламой.png',
       title: 'Завершенные курсы',
       description: 'Отслеживание завершенных курсов лечения с возможностью просмотра истории и получения рекомендаций.'
     }
@@ -938,7 +936,7 @@ const MoyaAptechkaPage = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <img 
-                  src="./images/my-kit/hero.png" 
+                  src="/images/my-kit/hero.png" 
                   alt="Моя Аптечка - мобильное приложение"
                 />
               </ProblemImage>
