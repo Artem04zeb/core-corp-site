@@ -27,8 +27,6 @@ import MisisQueuePage from './pages/Project/misis-queue';
 import SpectraCpqPage from './pages/Project/spectra-cpq';
 import MoyaAptechkaPage from './pages/Project/moya-aptechka';
 import TravelAggregatorPage from './pages/Project/travel-aggregator';
-import TestProject from './pages/Project/test-project';
-import SolterraSimple from './pages/Project/solterra-simple';
 
 function HomePage() {
   return (
@@ -65,8 +63,6 @@ function AppContent() {
           <Route path="/project/spectra-cpq" element={<SpectraCpqPage />} />
           <Route path="/project/moya-aptechka" element={<MoyaAptechkaPage />} />
           <Route path="/project/travel-aggregator" element={<TravelAggregatorPage />} />
-          <Route path="/project/test" element={<TestProject />} />
-          <Route path="/project/solterra-simple" element={<SolterraSimple />} />
         </Routes>
       </Router>
       <ContactPopup isOpen={isPopupOpen} onClose={closePopup} />
