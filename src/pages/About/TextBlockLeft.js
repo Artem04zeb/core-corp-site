@@ -70,7 +70,7 @@ const SubText = styled(motion.div)`
 
 const TextBlockLeft = () => {
   return (
-    <TextSection>
+    <TextSection role="main" aria-label="О компании CORE - наша миссия и подход">
       <Container>
         <TextContent>
           <MainText

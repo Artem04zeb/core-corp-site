@@ -68,7 +68,7 @@ const ParallaxBlock = () => {
   };
 
   return (
-    <ImageSection>
+    <ImageSection role="complementary" aria-label="Команда CORE - участие в международных программах">
       <Container>
         <ImageContainer
           initial={{ opacity: 0, y: 30 }}
@@ -78,9 +78,10 @@ const ParallaxBlock = () => {
         >
           <StyledImage 
             src="/images/photo_2025.jpg" 
-            alt="Команда студии CORE за работой"
+            alt="Команда студии CORE за работой - стажёры в оранжевых футболках на летней школе университета UESTC в Китае 2025"
             onLoad={handleImageLoad}
             onError={handleImageError}
+            loading="lazy"
           />
         </ImageContainer>
         

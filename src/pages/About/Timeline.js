@@ -143,7 +143,7 @@ const Timeline = () => {
   };
 
   return (
-    <TimelineSection>
+    <TimelineSection role="complementary" aria-label="История развития компании CORE">
       <Container>
         <SectionHeader>
           <Title
@@ -156,7 +156,7 @@ const Timeline = () => {
           </Title>
         </SectionHeader>
 
-        <TimelineContainer>
+        <TimelineContainer role="list" aria-label="Хронология развития CORE">
           <TimelineLine />
           <motion.div
             variants={containerVariants}
@@ -169,6 +169,8 @@ const Timeline = () => {
                 key={index}
                 variants={itemVariants}
                 transition={{ duration: 0.6 }}
+                role="listitem"
+                aria-label={`${event.year}: ${event.content}`}
               >
                 <TimelineDot />
                 <TimelineYear>{event.year}</TimelineYear>
@@ -177,6 +179,32 @@ const Timeline = () => {
             ))}
           </motion.div>
         </TimelineContainer>
+        
+        {/* Structured Data for Timeline */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "История развития CORE",
+            "description": "Хронология развития компании CORE с 2022 по 2025 год",
+            "url": "https://core-studio.ru/about",
+            "numberOfItems": timelineEvents.length,
+            "itemListElement": timelineEvents.map((event, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Event",
+                "name": `CORE в ${event.year}`,
+                "description": event.content,
+                "startDate": event.year,
+                "organizer": {
+                  "@type": "Organization",
+                  "name": "CORE Studio"
+                }
+              }
+            }))
+          })}
+        </script>
       </Container>
     </TimelineSection>
   );

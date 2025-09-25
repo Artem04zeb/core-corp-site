@@ -69,7 +69,7 @@ const Title = styled(motion.h1)`
 
 const AboutHero = () => {
   return (
-    <HeroSection>
+    <HeroSection role="banner" aria-label="О компании CORE - цифровое агенство полного цикла">
       <BackgroundOverlay />
       <Container>
         <HeroContent>
