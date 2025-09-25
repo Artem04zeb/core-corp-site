@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useContactPopupContext } from '../../contexts/ContactPopupContext';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 
 // Container
 const ProjectPageContainer = styled.div`
@@ -437,6 +438,12 @@ const itemVariants = {
 
 const MisisQueuePage = () => {
   const { openPopup } = useContactPopupContext();
+  
+  const breadcrumbItems = [
+    { label: 'Главная', path: '/' },
+    { label: 'Проекты', path: '/projects' },
+    { label: 'МИСИС Queue', path: '/project/misis-queue' }
+  ];
 
   const handleContactClick = () => {
     openPopup();
@@ -452,6 +459,9 @@ const MisisQueuePage = () => {
           </BackButton>
         </HeaderContainer>
       </MinimalHeader>
+      
+      {/* Хлебные крошки */}
+      <Breadcrumbs items={breadcrumbItems} />
 
       <main>
         {/* Hero Section */}

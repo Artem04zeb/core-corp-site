@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useContactPopupContext } from '../../contexts/ContactPopupContext';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 
 // Container
 const ProjectPageContainer = styled.div`
@@ -794,6 +795,12 @@ const MoyaAptechkaPage = () => {
   const { openPopup } = useContactPopupContext();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [modalImage, setModalImage] = useState(null);
+  
+  const breadcrumbItems = [
+    { label: 'Главная', path: '/' },
+    { label: 'Проекты', path: '/projects' },
+    { label: 'Моя Аптечка', path: '/project/moya-aptechka' }
+  ];
 
   const handleContactClick = () => {
     openPopup();
@@ -879,6 +886,9 @@ const MoyaAptechkaPage = () => {
 
   return (
     <ProjectPageContainer>
+      {/* Хлебные крошки */}
+      <Breadcrumbs items={breadcrumbItems} />
+      
       <main>
         {/* Проблема (вступление) */}
         <ProblemSection>
