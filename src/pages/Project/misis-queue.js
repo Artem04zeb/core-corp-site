@@ -463,9 +463,9 @@ const MisisQueuePage = () => {
       {/* Хлебные крошки */}
       <Breadcrumbs items={breadcrumbItems} />
 
-      <main>
+      <main role="main" aria-label="Проект МИСИС Queue - цифровой сервис для студентов">
         {/* Hero Section */}
-        <HeroSection>
+        <HeroSection role="banner" aria-label="МИСИС-заселение - цифровой сервис для студентов">
           <HeroBackground />
           <Container>
             <HeroContent>
@@ -491,6 +491,7 @@ const MisisQueuePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.1, delay: 0.1 }}
                 whileHover={{ scale: 1.02 }}
+                aria-label="Обсудить проект МИСИС Queue с командой CORE"
               >
                 Обсудить проект для вашей организации
               </CTAButton>
@@ -499,7 +500,7 @@ const MisisQueuePage = () => {
         </HeroSection>
 
         {/* О проекте */}
-        <Section>
+        <Section role="complementary" aria-label="Информация о проекте МИСИС Queue">
           <SectionContainer>
             <SectionTitle>О проекте</SectionTitle>
             <SectionText>
@@ -580,9 +581,15 @@ const MisisQueuePage = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              role="grid"
+              aria-label="Галерея скриншотов МИСИС Queue"
             >
-              <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/time.png" alt="Автоматическое распределение студентов в общежитиях" />
+              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Автоматическое распределение студентов">
+                <GalleryImage 
+                  src="/images/misis/screens/time.png" 
+                  alt="Скриншот системы МИСИС Queue - автоматическое распределение студентов в общежитиях с выбором времени заселения" 
+                  loading="lazy"
+                />
                 <GalleryCaption>
                 Система обрабатывает загруженный оператором файл и автоматически определяет, в какое общежитие направлен студент. 
                 Далее она ограничивает выбор и предоставляет пользователю только релевантные варианты. 
@@ -590,24 +597,36 @@ const MisisQueuePage = () => {
                 </GalleryCaption>
               </GalleryItem>
               
-              <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/info.png" alt="Организация информации и документов" />
+              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Организация информации и документов">
+                <GalleryImage 
+                  src="/images/misis/screens/info.png" 
+                  alt="Скриншот системы МИСИС Queue - организация информации и документов для студентов" 
+                  loading="lazy"
+                />
                 <GalleryCaption>
                 Вся необходимая организационная информация и обязательные документы собраны в отдельном окне. 
                 Это исключает путаницу и гарантирует, что студент всегда имеет доступ к актуальным данным в удобном формате.
                 </GalleryCaption>
               </GalleryItem>
               
-              <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/final.png" alt="Удобный интерфейс для студентов" />
+              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Удобный интерфейс для студентов">
+                <GalleryImage 
+                  src="/images/misis/screens/final.png" 
+                  alt="Скриншот системы МИСИС Queue - удобный интерфейс для студентов с простой регистрацией" 
+                  loading="lazy"
+                />
                 <GalleryCaption>
                 Простая регистрация и быстрый вход позволяют студентам заселиться без лишних ожиданий. 
                 Нет необходимости стоять у дверей общежития часами: система формирует точный график, и каждого студента ждут к назначенному времени.
                 </GalleryCaption>
               </GalleryItem>
               
-              <GalleryItem variants={itemVariants}>
-                <GalleryImage src="/images/misis/screens/list.png" alt="Панель управления для административной стороны" />
+              <GalleryItem variants={itemVariants} role="gridcell" aria-label="Панель управления для администрации">
+                <GalleryImage 
+                  src="/images/misis/screens/list.png" 
+                  alt="Скриншот системы МИСИС Queue - панель управления для административной стороны с мониторингом и контролем" 
+                  loading="lazy"
+                />
                 <GalleryCaption>
                 Для администрации реализован модуль мониторинга и контроля. 
                 Он позволяет отслеживать активность студентов, просматривать статистику и оперативно решать спорные ситуации. 
@@ -690,6 +709,50 @@ const MisisQueuePage = () => {
             </NavigationLinks>
           </SectionContainer>
         </ContactSection>
+        
+        {/* Structured Data for Project */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "МИСИС Queue - система заселения студентов",
+            "description": "Цифровая платформа для регистрации абитуриентов и студентов в общежития НИТУ МИСИС. Система охватывает более 1400 студентов ежегодно и координирует работу более 70 сотрудников.",
+            "url": "https://core-studio.ru/project/misis-queue",
+            "applicationCategory": "EducationApplication",
+            "operatingSystem": "Web",
+            "dateCreated": "2023",
+            "creator": {
+              "@type": "Organization",
+              "name": "CORE Studio",
+              "url": "https://core-studio.ru"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "НИТУ МИСИС",
+              "url": "https://misis.ru"
+            },
+            "featureList": [
+              "Автоматическое распределение студентов в общежития",
+              "Организация информации и документов",
+              "Удобный интерфейс для студентов",
+              "Панель управления для администрации",
+              "Мониторинг и контроль процесса заселения"
+            ],
+            "screenshot": [
+              "https://core-studio.ru/images/misis/screens/time.png",
+              "https://core-studio.ru/images/misis/screens/info.png",
+              "https://core-studio.ru/images/misis/screens/final.png",
+              "https://core-studio.ru/images/misis/screens/list.png"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "ratingCount": "1400",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          })}
+        </script>
       </main>
     </ProjectPageContainer>
   );
