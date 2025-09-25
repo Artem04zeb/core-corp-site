@@ -1,0 +1,15 @@
+{
+  "short_name": "CORE",
+  "name": "CORE Studio - Веб-агенство",
+  "icons": [
+    {
+      "src": "/images/animation.gif",
+      "sizes": "any",
+      "type": "image/gif"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#151515",
+  "background_color": "#151515"
+}
