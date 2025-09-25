@@ -575,7 +575,7 @@ const NavLink = styled(Link)`
 
 const ProjectPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { openPopup } = useContactPopupContext();
+  const { openPopup } = useContactPopupContext(); // Updated ContactCTA button
   
   const images = [
     "/images/solterra/screens/1.png",
