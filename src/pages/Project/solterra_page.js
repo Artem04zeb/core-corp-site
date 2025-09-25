@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useContactPopupContext } from '../../contexts/ContactPopupContext';
-import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 
 const ProjectPageContainer = styled.div`
   background-color: #29161f;
@@ -578,11 +577,6 @@ const ProjectPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { openPopup } = useContactPopupContext(); // Updated ContactCTA button
   
-  const breadcrumbItems = [
-    { label: 'Главная', path: '/' },
-    { label: 'Проекты', path: '/projects' },
-    { label: 'Solterra', path: '/project/solterra' }
-  ];
   
   const images = [
     "/images/solterra/screens/1.png",
@@ -618,9 +612,6 @@ const ProjectPage = () => {
         </HeaderContainer>
       </MinimalHeader>
       
-      {/* Хлебные крошки */}
-      <Breadcrumbs items={breadcrumbItems} />
-
       {/* Hero-блок */}
       <HeroSection>
         <HeroContainer>
