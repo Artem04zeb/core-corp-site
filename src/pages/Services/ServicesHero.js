@@ -121,7 +121,7 @@ const ServicesHero = () => {
   };
 
   return (
-    <HeroSection>
+    <HeroSection role="banner" aria-label="Услуги CORE - от стратегии до запуска">
       <Container>
         <HeroContent>
           <ContentSection>
@@ -145,16 +145,20 @@ const ServicesHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
+              role="group"
+              aria-label="Действия"
             >
               <PrimaryCTA
                 onClick={handleContactClick}
                 whileHover={{ scale: 1.02 }}
+                aria-label="Обсудить вашу задачу с командой CORE"
               >
                 Обсудить задачу
               </PrimaryCTA>
               <SecondaryCTA
                 href="/projects"
                 whileHover={{ scale: 1.02 }}
+                aria-label="Посмотреть портфолио проектов"
               >
                 Посмотреть проекты
               </SecondaryCTA>

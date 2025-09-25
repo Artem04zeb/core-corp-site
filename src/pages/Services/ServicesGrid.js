@@ -231,7 +231,7 @@ const ServicesGridComponent = () => {
   };
 
   return (
-    <ServicesSection>
+    <ServicesSection role="main" aria-label="Услуги CORE">
       <Container>
         <SectionHeader>
           <Title
@@ -258,17 +258,22 @@ const ServicesGridComponent = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          role="grid"
+          aria-label="Сетка услуг"
         >
           {services.map((service) => (
             <ServiceCard
               key={service.id}
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
+              role="gridcell"
+              aria-label={`Услуга: ${service.title}`}
+              tabIndex={0}
             >
               <ServiceTitle>{service.title}</ServiceTitle>
-              <ServiceList>
+              <ServiceList role="list" aria-label={`Список услуг: ${service.title}`}>
                 {service.items.map((item, index) => (
-                  <ServiceItem key={index}>{item}</ServiceItem>
+                  <ServiceItem key={index} role="listitem">{item}</ServiceItem>
                 ))}
               </ServiceList>
             </ServiceCard>
@@ -277,16 +282,48 @@ const ServicesGridComponent = () => {
           <ConsultationCard
             variants={itemVariants}
             whileHover={{ scale: 1.02 }}
+            role="gridcell"
+            aria-label="Консультация со специалистом"
           >
             <ConsultationTitle>Консультация со специалистом</ConsultationTitle>
             <ConsultationSubtitle>
             Определим необходимые услуги и формат сотрудничества под ваши задачи
             </ConsultationSubtitle>
-            <ConsultationCTA onClick={openPopup}>
+            <ConsultationCTA 
+              onClick={openPopup}
+              aria-label="Обсудить проект с командой CORE"
+            >
               Обсудить проект
             </ConsultationCTA>
           </ConsultationCard>
         </ServicesGrid>
+        
+        {/* Structured Data for Services */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Услуги CORE",
+            "description": "Полный спектр услуг веб-агенства CORE: брендинг, UI/UX дизайн, разработка сайтов, маркетинг и поддержка",
+            "url": "https://core-studio.ru/services",
+            "numberOfItems": services.length,
+            "itemListElement": services.map((service, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Service",
+                "name": service.title,
+                "description": service.items.join(", "),
+                "provider": {
+                  "@type": "Organization",
+                  "name": "CORE Studio"
+                },
+                "serviceType": service.title,
+                "areaServed": "RU"
+              }
+            }))
+          })}
+        </script>
       </Container>
     </ServicesSection>
   );
