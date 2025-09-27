@@ -420,8 +420,8 @@ const FullscreenMenu = ({ isOpen, onClose }) => {
 
               <ContactSection variants={slideUp}>
                 <ContactTitle>Связь</ContactTitle>
-                <ContactLink href="mailto:hello@core.studio">
-                  hello@core.studio
+                <ContactLink href="mailto:hello@core-agency.ru">
+                  hello@core-agency.ru
                 </ContactLink>
                 <ContactLink href="tel:+79180038384">
                   +7 (918) 003-83-84
