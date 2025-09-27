@@ -242,31 +242,31 @@ const Hero = () => {
   const newsData = [
     {
       id: 1,
-      title: "Запуск проекта Riviera Moinako",
+      title: "Запуск проекта Riviera Moinako",  
       description: "Новый веб-сайт для жилого комплекса с интерактивными картами и виртуальными турами",
       link: "/project/riviera-moinako",
-      date: "15.01.2025"
+      date: "27.09.2025"
     },
     {
       id: 2,
       title: "Обновление MISIS Queue",
       description: "Система управления очередями получила новые функции аналитики",
       link: "/project/misis-queue",
-      date: "10.01.2025"
+      date: "20.09.2025"
     },
     {
       id: 3,
       title: "Запуск My Kit",
       description: "Мобильное приложение для управления аптечкой и здоровьем семьи",
       link: "/project/moya-aptechka",
-      date: "05.01.2025"
+      date: "18.08.2025"
     },
     {
       id: 4,
       title: "Spectra CPQ обновлен",
       description: "Конфигуратор продуктов получил улучшенный интерфейс",
       link: "/project/spectra-cpq",
-      date: "28.12.2024"
+      date: "17.08.2024"
     },
     {
       id: 5,
@@ -281,19 +281,39 @@ const Hero = () => {
     {
       id: 1,
       text: "Новый проект в разработке - Solterra",
-      time: "25.06.2025"
+      time: "19.09.2025"
     },
     {
       id: 2,
       text: "Обновление портфолио завершено",
-      time: "9.06.2025"
+      time: "17.08.2025"
     },
     {
       id: 3,
       text: "Доступны новые услуги по разработке",
-      time: "12.09.2025"
+      time: "16.07.2025"
     }
   ];
+
+  // Функция для преобразования даты в формат для сортировки
+  const parseDate = (dateString) => {
+    const [day, month, year] = dateString.split('.');
+    return new Date(year, month - 1, day);
+  };
+
+  // Объединяем и сортируем данные в хронологическом порядке
+  const combinedData = [
+    ...newsData.map(item => ({
+      ...item,
+      type: 'news',
+      sortDate: parseDate(item.date)
+    })),
+    ...notifications.map(item => ({
+      ...item,
+      type: 'notification',
+      sortDate: parseDate(item.time)
+    }))
+  ].sort((a, b) => b.sortDate - a.sortDate); // Сортировка по убыванию (новые сверху)
 
   return (
     <HeroSection role="banner" aria-label="Главная секция">
@@ -343,22 +363,22 @@ const Hero = () => {
             </NewsHeader>
             
             <NewsContent>
-              {newsData.map((item, index) => (
-                <NewsItem key={item.id} role="article">
-                  <NewsItemTitle>{item.title}</NewsItemTitle>
-                  <NewsItemDescription>{item.description}</NewsItemDescription>
-                  <NewsItemDate>{item.date}</NewsItemDate>
-                  <NewsItemLink to={item.link} aria-label={`Подробнее о ${item.title}`}>
-                    Подробнее →
-                  </NewsItemLink>
-                </NewsItem>
-              ))}
-              
-              {notifications.map((notification) => (
-                <NotificationItem key={notification.id} role="alert">
-                  <NotificationText>{notification.text}</NotificationText>
-                  <NotificationTime>{notification.time}</NotificationTime>
-                </NotificationItem>
+              {combinedData.map((item) => (
+                item.type === 'news' ? (
+                  <NewsItem key={`news-${item.id}`} role="article">
+                    <NewsItemTitle>{item.title}</NewsItemTitle>
+                    <NewsItemDescription>{item.description}</NewsItemDescription>
+                    <NewsItemDate>{item.date}</NewsItemDate>
+                    <NewsItemLink to={item.link} aria-label={`Подробнее о ${item.title}`}>
+                      Подробнее →
+                    </NewsItemLink>
+                  </NewsItem>
+                ) : (
+                  <NotificationItem key={`notification-${item.id}`} role="alert">
+                    <NotificationText>{item.text}</NotificationText>
+                    <NotificationTime>{item.time}</NotificationTime>
+                  </NotificationItem>
+                )
               ))}
             </NewsContent>
           </NewsSection>

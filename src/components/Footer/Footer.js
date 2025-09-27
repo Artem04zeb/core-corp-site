@@ -29,7 +29,7 @@ const FooterContent = styled.div`
 
 const ImageSection = styled.div`
   @media (max-width: 1024px) {
-    order: 2;
+    order: 1;
   }
 `;
 
@@ -63,7 +63,7 @@ const FooterTextContent = styled.p`
 
 const ContentSection = styled.div`
   @media (max-width: 1024px) {
-    order: 1;
+    order: 2;
   }
 `;
 
@@ -194,8 +194,8 @@ const Footer = () => {
                 <InfoTitle>Связь</InfoTitle>
                 <InfoList>
                   <InfoItem>
-                    <InfoLink href="mailto:info@core-studio.ru">
-                      info@core-studio.ru
+                    <InfoLink href="mailto:hello@core-studio.ru">
+                      hello@core-studio.ru
                     </InfoLink>
                   </InfoItem>
                   <InfoItem>
@@ -235,7 +235,7 @@ const Footer = () => {
               "@type": "ContactPoint",
               "telephone": "+7-999-123-45-67",
               "contactType": "customer service",
-              "email": "info@core-studio.ru"
+              "email": "hello@core-studio.ru"
             },
             "address": [
               {

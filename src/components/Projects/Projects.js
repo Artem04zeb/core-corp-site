@@ -180,7 +180,7 @@ const Projects = () => {
       title: 'Мобильное приложение «Моя Аптечка»',
       result: 'Мобильное приложение для медицинского стартапа с функцией управления лекарствами и напоминаниями',
       image: '/images/my-kit/preview/preview.png',
-      link: '/my-pharmacy'
+      link: '/project/moya-aptechka'
     }
   ];
 
